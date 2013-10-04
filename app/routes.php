@@ -13,5 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return Redirect::to('guests');
 });
+
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// });
+
+Route::controller( 'guests/{id?}', 'GuestController' );
